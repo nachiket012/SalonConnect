@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+<h3>Email List</h3>
+<table border=5>
+    <tr>
+        <th>User_id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Age</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{user["user_id"]}}</td>
+        <td>{{user["name"]}}</td>
+        <td>{{user["Gender"]}}</td>
+        <td>{{user["address"]}}</td>
+        <td>{{user["phone"]}}</td>
+        <td>{{user["Age"]}}</td>
+        
+        
+    </tr>
+    {% endfor %}
+</table>
+<br><br>
+<a href="/">Go Home</a>
+</body>
+</html>

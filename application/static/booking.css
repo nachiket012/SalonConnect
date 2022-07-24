@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#topBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 60vh;
+    width: 99vw;
+}
+
+#topBox::before {
+    Content: "";
+    background: url(./images/guilherme-petri-PtOfbGkU3uI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: inherit;
+    width: inherit;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#mainNavBar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 300ms;
+}
+
+#mainNavBar ul li a:hover {
+    color: rgb(72, 61, 0);
+    text-decoration: underline;
+}
+
+#mainNavBar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end;
+    column-gap: 10%;
+}
+
+#mainNavBar {
+    margin-top: 2%;
+    position: relative;
+    left: 22%;
+    width: 50%;
+}
+
+#topBox h1 {
+    align-self: center;
+    position: relative;
+    top: 40%;
+    font-size: 3.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#mainDisplay {
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5%;
+}
+
+#shopgenInfo {
+    background-color: rgba(128, 128, 128, 0.289);
+    height: 40%;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5%;
+}
+
+.shopImg {
+    height: 98%;
+    width: 30%;
+}
+
+.shopImg::before {
+    Content: "";
+    background: url(./images/guilherme-petri-PtOfbGkU3uI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40%;
+    width: inherit;
+    /* opacity: 0.7; */
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    position: absolute;
+    z-index: -1;
+}
+
+.shopDesc {
+    height: 98%;
+    width: 30%;
+}
+
+.shopContact {
+    height: 98%;
+    width: 20%;
+}
+
+#servicesgenInfo {
+    height: 50%;
+    width: 70%;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    color: gold;
+    background-color: black;
+    border-radius: 20%;
+}

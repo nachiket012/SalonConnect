@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>salonConnectWebApp</title>
+</head>
+
+<body>
+<div id="topBox">
+    <nav id="mainNavBar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <div id="searchBar">
+        <form action="#" method="post">
+            <input type="search" name="city" id="search" placeholder="Search for your city to display top rated">
+            <button type="submit" style="cursor: pointer;">Search</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="generalInfo">
+    <div class="genInfoText">
+        <h1>The Top Rated</h1>
+        <i class="fa-solid fa-scissors kenchi"></i>
+        <h4>-- Trendy Saloon & Spa --</h4>
+        <p>Book Me Barber is a place where from several years we create a unique fashion accessories for women and men,
+            often personalized for individual needs and tastes. We dedicate the main part of our work to unforgetable
+            wedding headpieces touched
+            with a retro aesthetics.</p>
+    </div>
+
+    <div id="shopList">
+
+        {% for shop in shops %}
+        <div class="shopInfo">
+            <div class="shopInfoImg1"></div>
+            <div class="shopInfoRating">Rating: {{shop['rating']}}</div>
+            <div class="shopInfoName">{{shop['shop_name']}}</div>
+            <div class="shopInfoLocation">{{shop['city']}}</div>
+            <div class="shopInfoTime">{{shop['open']}} - {{shop['close']}}</div>
+            <div class="shopInfoBook">
+                <form action="/services" method="post">
+                    <input type="hidden" name="shop_view" value={{shop['shop_id']}}>
+                    <a href="/services"> Book Now</a>
+                </form>
+            </div>
+        </div>
+        {%endfor%}
+            
+    </div>
+</div>
+
+<div id="appInfo">
+    <div class="genInfoApp">
+        <h1>App Features</h1>
+        <i class="fa-solid fa-scissors kenchi"></i>
+        <h4>Trendy Saloon & Spas</h4>
+        <p>Book a salon of your choice from “Our Services”, where skilled barbers combine a modern mixture of classic
+            quality with the latest styles and products.</p>
+    </div>
+</div>
+
+
+</body>
+
+</html>

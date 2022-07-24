@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/booking.css">
+
+
+    <title>booking|salonConnectWebApp</title>
+</head>
+
+<body>
+<div id="topBox">
+    <nav id="mainNavBar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signout">Sign Out</a></li>
+        </ul>
+    </nav>
+    <h1>Shop Description</h1>
+</div>
+
+<div id="mainDisplay">
+
+    <div id="shopgenInfo">
+
+        <div class="shopImg">
+
+        </div>
+
+        <div class="shopDesc">
+            <h3>{{user['name']}}</h3>
+
+            
+                <a href="/update/{{user['user_id']}}">
+                <button type="submit" class = "btn btn-success">Change personal info</button>
+                </a>
+
+        </div>
+
+        <div class="shopContact">
+            <h4>Personal Info:</h4>
+            <p>Email: {{user['email']}}</p>
+            <p>Address: {{user['address']}}</p>
+            <p>Phone: {{user['phone']}}</p>
+            <p>Age: {{user['Age']}}</p>
+        </div>
+    </div>
+
+    <div id="servicesgenInfo">
+        <div class="table-responsive">
+            <h3>Your past bookings:</h3>
+            <table class="table table-hover ">
+                <tbody>
+                <tr>
+                    <td><b>Service</b></td>
+                    <td><b>Shop</b></td>
+                    <td><b>Time</b></td>
+                    <td></td>
+                </tr>
+                {%for key, value in services.items()%}
+                <tr>
+                    <td>{{value['Service']}}</td>
+                    <td>{{value['Shopname']}}</td>
+                    <td>{{value['time']}} mins</td>
+                    <td>
+                        <form action="/dashboard" method="post">
+                            <label for="rating">Rate the Service:</label>
+                            <select name="rating" id="rating">
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                            </select>
+                            <input type="hidden" name="rank" value="{{key}}">
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                        </form>
+                    </td>
+
+                </tr>
+                {%endfor%}
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

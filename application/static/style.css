@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#topBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 90vh;
+    width: 99vw;
+    background-image: url("./images/guilherme-petri-PtOfbGkU3uI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainNavBar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 300ms;
+}
+
+#mainNavBar ul li a:hover {
+    color: rgb(72, 61, 0);
+    text-decoration: underline;
+}
+
+#mainNavBar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end;
+    column-gap: 10%;
+}
+
+#mainNavBar {
+    margin-top: 2%;
+    position: relative;
+    left: 22%;
+    width: 50%;
+}
+
+#searchBar {
+    background-color: gold;
+    width: 40%;
+    align-self: center;
+    position: relative;
+    top: 45%;
+    min-width: 310px;
+}
+
+#searchBar form input {
+    height: 100%;
+    width: 77%;
+    padding: 3%;
+    border: 2px solid gold;
+}
+
+#searchBar form button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gold;
+    background-color: black;
+    width: 21%;
+    padding: 3%;
+    border: 2px solid gold;
+}
+
+#generalInfo {
+    background-color: rgba(255, 228, 196, 0.505);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.genInfoText {
+    margin-top: 5%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 5%;
+    text-align: center;
+}
+
+#genInfoText h1 {
+    font-family: sans-serif;
+}
+
+.kenchi {
+    font-size: 2rem;
+    color: rgb(129, 109, 0);
+}
+
+#shopList {
+    margin-top: 1%;
+    height: 44%;
+    align-self: center;
+    justify-content: center;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    overflow: scroll
+}
+
+.shopInfo {
+    background-color: rgba(226, 226, 226, 0.734);
+    min-width: 200px;
+    width: 15%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid brown;
+    row-gap: 2%;
+}
+
+.shopInfoImg1 {
+    height: 40%;
+    width: 95%;
+    background-repeat: no-repeat;
+    background-image: url("./images/guilherme-petri-PtOfbGkU3uI-unsplash.jpg");
+    background-size: cover;
+}
+
+.shopInfoImg2 {
+    height: 40%;
+    width: 95%;
+    background-image: url("./Hair_Salon_Stations.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.shopInfoImg3 {
+    height: 40%;
+    width: 95%;
+    background-image: url("./guilherme-petri-PtOfbGkU3uI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.shopInfoImg4 {
+    height: 40%;
+    width: 95%;
+    background-image: url("./istockphoto-1341429602-170667a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.shopInfoBook a {
+    text-decoration: none;
+    color: gold;
+}
+
+.shopInfoBook {
+    background-color: black;
+    color: gold;
+    border: 2px solid gold;
+    padding: 5%;
+    border-radius: 20%;
+}
+
+#appInfo {
+    height: 35vh;
+}
+
+.genInfoApp {
+    margin-top: 2%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 5%;
+    text-align: center;
+}

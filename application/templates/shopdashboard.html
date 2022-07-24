@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/booking.css">
+
+
+    <title>booking|salonConnectWebApp</title>
+</head>
+
+<body>
+<div id="topBox">
+    <nav id="mainNavBar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signout">Sign Out</a></li>
+        </ul>
+    </nav>
+    <h1>Shop Description</h1>
+</div>
+
+<div id="mainDisplay">
+
+    <div id="shopgenInfo">
+
+        <div class="shopImg">
+
+        </div>
+
+        <div class="shopDesc">
+            <h3>{{shop['shop_name']}}</h3>
+
+            <ul>
+                <li><a href="/shopupdate/{{shop['shop_id']}}"> Change personal info</a></li>
+            </ul>
+
+        </div>
+
+        <div class="shopContact">
+            <h4>Personal Info:</h4>
+            <p>Phone: {{shop['phone']}}</p>
+            <p>Address: {{shop['Address']}}</p>
+            <p>Owner: {{shop['owner_name']}}</p>
+        </div>
+    </div>
+
+    <div id="servicesgenInfo">
+        <div class="table-responsive">
+            <h3>Your past bookings:</h3>
+            <table class="table table-hover ">
+                <tbody>
+                <tr>
+                    <td><b>Service</b></td>
+                    <td><b>Customer</b></td>
+                    <td><b>Status</b></td>
+                    <td></td>
+                </tr>
+                {%for serv in servque%}
+                <tr>
+                    <td>{{serv['Service']}}</td>
+                    <td>{{serv['Customer']}}</td>
+                    <td>
+                        <form action="/shopdashboard/{{sid}}" method="post">
+                            <input type="hidden" name="rank" value={{serv['Rank']}}>
+                            <input type="hidden" name="done" value="done">
+                            <button type="submit" class="btn btn-success">
+                                Done
+                            </button>
+                        </form>
+                    </td>
+
+                </tr>
+                {%endfor%}
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
